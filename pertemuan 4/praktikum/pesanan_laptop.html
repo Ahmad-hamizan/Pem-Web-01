@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <header style="width: 100%; margin-bottom: 24px">
+        <nav>
+            <ul
+              style="
+                display: inline-flex;
+                gap: 32px;
+                list-style: none;
+                padding: 12px;
+                border: 1px solid #ccc;
+                justify-content: center;
+              "
+            >
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a>|</a>
+              </li>
+              <li><a href="#">Register</a></li>
+              <li>
+                <a>|</a>
+              </li>
+              <li><a href="#">Policy</a></li>
+              <li>
+                <a>|</a>
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+          <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+            width: 100%;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              align-items: center;
+            "
+          >
+            <img src="https://placehold.co/250" alt="Placeholder" />
+            <button style="width: fit-content; padding: 4px 8px">
+              Upload Picture
+            </button>
+          </div>
+          <form style="display: flex; flex-direction:column ; gap: 6px ; width: 100%" ; action="hs.html">
+            <div style="font-size:15px">
+              <p>Title Here :   ASUS Vivobook Go 15 OLED</p>
+              <p>Deskripstion :   Year(2023)</p>
+              <p>Total Amount : $550 </p>
+              <p>Pay to : 987-654-321-0</p>
+            </div>
+            <div>
+              <p>Payment type: <input type="text" list="bank" name="bank">
+              
+              <datalist id="bank">
+                <option value="BCA">
+                <option value="BRI">
+                <option value="BSI">
+                <option value="Mandiri">
+                <option value="BNI">
+              </datalist>
+            </div>
+            <div>
+              <label for="pmgngakn">account Holder: </label>
+              <input type="account" id="akun">
+            </div>
+            <div>
+              <label for="accnt">Account No: </label>
+              <input type="number" id="nomor">
+              <p><input type="checkbox">
+              <label for="send" ; style="font-size:10px">Send to Mobile Phone</label></p>
+              <p><input type="checkbox">
+              <label for="send" ; style="font-size:10px">Send to Email</label></p>
+            </div>
+            <div>
+              <label for="nmrtlpn">Send to Mobile Phone: </label>
+              <input type="number" id="nomor">
+            </div>
+            <div>
+              <label for="accnt">Send to Email: </label>
+              <input type="email" id="email">
+            </div>
+            
+            <button type="submit" style="padding:3px 9px; width: fit-content; background-color:green; color:white ;">Pay using Quidlink</button>
+          </form>
+      </header>
+</body>
+</html>
