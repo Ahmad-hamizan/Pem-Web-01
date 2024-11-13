@@ -1,0 +1,36 @@
+body {
+    background-color: antiquewhite;
+
+}
+
+.foto {
+    margin: 20px;
+    border: 0.5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.foto img {
+    width: 15%;
+    height: 150px;
+    flex-grow: 3;
+}
+
+.poto {
+    margin: 20px;
+    border: 0.5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.poto img {
+    width: 15%;
+    height: 150px;
+    flex-grow: 1;
+}
+

@@ -1,0 +1,20 @@
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: lightskyblue;
+    padding: .5em;
+    margin: 0;
+}
+
+header li {
+    margin: 0 1em;
+}
+
+header li.logo {
+    margin-right: 60%;
+}
+
+.logo img {
+    width: 30%;
+}
