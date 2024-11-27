@@ -4,9 +4,10 @@ Welcome to the project documentation. Below you'll find a list of all available 
 
 
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-11-27 05:37 UTC*
+*Last updated: 2024-11-27 10:38 UTC*
 
 Browse through our available pages:
 
@@ -46,16 +47,6 @@ Browse through our available pages:
 ### 📁 pertemuan 4/tugas
 
 - [📍 pertemuan 4/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/tugas/index)
-
-### 📁 pertemuan 5/praktikum
-
-- [📄 Alpukat](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 5/praktikum/alpukat)
-
-### 📁 pertemuan 5/tugas
-
-- [📄 Burung](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 5/tugas/burung)
-- [📄 Table](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 5/tugas/table)
-- [📄 Vitamin](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 5/tugas/vitamin)
 
 ### 📁 pertemuan 6/praktikum
 
@@ -109,6 +100,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 42 page(s) in 17 folder(s)
+📊 **Stats**: 38 page(s) in 15 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*
