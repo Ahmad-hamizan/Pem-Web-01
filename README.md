@@ -3,9 +3,10 @@
 Welcome to the project documentation. Below you'll find a list of all available pages.
 
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-11-27 01:04 UTC*
+*Last updated: 2024-11-27 05:37 UTC*
 
 Browse through our available pages:
 
@@ -78,33 +79,33 @@ Browse through our available pages:
 
 - [📍 pertemuan 7/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 7/tugas/index)
 
-### 📁 pertemuan 8
-
-- [📄 Form](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/form)
-- [📍 pertemuan 8](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/index)
-- [📄 Log In](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/log-in)
-
-### 📁 pertemuan 8/pesanan
-
-- [📄 Pesanan1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan1)
-- [📄 Pesanan2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan2)
-- [📄 Pesanan3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan3)
-- [📄 Pesanan4](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan4)
-- [📄 Pesanan5](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan5)
-- [📄 Pesanan6](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan6)
-- [📄 Pesanan7](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan7)
-- [📄 Pesanan8](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/pesanan/pesanan8)
-
-### 📁 pertemuan 8
-
-- [📄 Register](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/register)
-- [📄 Sukses](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 8/sukses)
-
 ### 📁 pertemuan 9/praktikum
 
 - [📄 Nomer1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer1)
 - [📄 Nomer2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer2)
 - [📄 Nomer3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer3)
+
+### 📁 pertemuan8
+
+- [📄 Form](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/form)
+- [📍 pertemuan8](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/index)
+- [📄 Log In](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/log-in)
+
+### 📁 pertemuan8/pesanan
+
+- [📄 Pesanan1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan1)
+- [📄 Pesanan2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan2)
+- [📄 Pesanan3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan3)
+- [📄 Pesanan4](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan4)
+- [📄 Pesanan5](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan5)
+- [📄 Pesanan6](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan6)
+- [📄 Pesanan7](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan7)
+- [📄 Pesanan8](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/pesanan/pesanan8)
+
+### 📁 pertemuan8
+
+- [📄 Register](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/register)
+- [📄 Sukses](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/sukses)
 
 ---
 
