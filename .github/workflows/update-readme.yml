@@ -1,0 +1,129 @@
+name: Update README with File Routes
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Update README with Routes
+        env:
+          BASE_URL: "https://ahmad-hamizan.github.io/Pem-Web-01"
+        run: |
+          # Initialize or read README
+          if [ ! -f README.md ]; then
+            cat > README.md << 'EOL'
+          # Project Documentation
+
+          Welcome to the project documentation. Below you'll find a list of all available pages.
+          EOL
+          fi
+
+          # Check if any HTML files exist
+          files=$(find . -type f -name "*.html" ! -path "./README.md" | sort)
+
+          # Generate new routes content
+          {
+            # Preserve existing content before routes section
+            if grep -q "## 📄 Available Routes" README.md; then
+              sed '/## 📄 Available Routes/,$d' README.md
+            else
+              cat README.md
+            fi
+            
+            # Add routes header with timestamp
+            echo -e "\n## 📄 Available Routes\n"
+            echo -e "*Last updated: $(date "+%Y-%m-%d %H:%M UTC")*\n"
+
+            if [ -z "$files" ]; then
+              echo "🚧 No pages available yet."
+            else
+              echo -e "Browse through our available pages:\n"
+
+              # Track current folder for formatting
+              current_folder=""
+              
+              # Process all HTML files
+              while IFS= read -r file; do
+                # Clean up path
+                path=${file#./}
+                path=${path%.html}
+                folder=$(dirname "$path")
+                basename=$(basename "$path")
+
+                # Handle folder headers
+                if [[ "$folder" != "." && "$folder" != "$current_folder" ]]; then
+                  # Check if folder still has HTML files
+                  if [ -n "$(find "./$folder" -maxdepth 1 -name "*.html" 2>/dev/null)" ]; then
+                    # Add emoji based on folder name
+                    case "$folder" in
+                      *blog*) emoji="📝" ;;
+                      *docs*) emoji="📚" ;;
+                      *pages*) emoji="📃" ;;
+                      *api*) emoji="🛠️" ;;
+                      *) emoji="📁" ;;
+                    esac
+                    echo -e "\n### ${emoji} ${folder}\n"
+                    current_folder="$folder"
+                  fi
+                fi
+
+                # Only add file if it still exists
+                if [ -f "$file" ]; then
+                  # Format route entry
+                  if [[ "$basename" == "index" ]]; then
+                    # Handle index files
+                    if [[ "$folder" == "." ]]; then
+                      echo "- [🏠 Homepage]($BASE_URL/)"
+                    else
+                      echo "- [📍 ${folder}]($BASE_URL/$path)"
+                    fi
+                  else
+                    # Handle regular files
+                    # Capitalize first letter and replace hyphens with spaces
+                    display_name=$(echo "$basename" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
+                    echo "- [📄 ${display_name}]($BASE_URL/$folder/$basename)"
+                  fi
+                fi
+              done <<< "$files"
+            fi
+
+            # Add footer with stats
+            echo -e "\n---\n"
+            if [ -n "$files" ]; then
+              folder_count=$(echo "$files" | sed 's|/[^/]*$||' | sort -u | grep -v "^\.$" | wc -l)
+              file_count=$(echo "$files" | wc -l)
+              echo "📊 **Stats**: $file_count page(s) in $folder_count folder(s)"
+              echo -e ""
+            fi
+            echo "💡 *Routes are automatically updated when pages are added or removed.*"
+          } > README.new
+
+          # Update README if there are changes
+          if ! cmp -s README.md README.new; then
+            mv README.new README.md
+            echo "should_commit=true" >> $GITHUB_ENV
+          else
+            rm README.new
+            echo "should_commit=false" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and Push changes
+        if: env.should_commit == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "📝 Update available routes [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
