@@ -7,76 +7,81 @@ Welcome to the project documentation. Below you'll find a list of all available 
 
 
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-11-27 13:14 UTC*
+*Last updated: 2024-11-27 13:20 UTC*
 
 Browse through our available pages:
 
 
-### 📁 pertemuan 2/praktikum
+### 📁 pertemuan2/praktikum
 
-- [📍 pertemuan 2/praktikum](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 2/praktikum/index)
+- [📍 pertemuan2/praktikum](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan2/praktikum/index)
 
-### 📁 pertemuan 2/tugas
+### 📁 pertemuan2/tugas
 
-- [📄 Cv](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 2/tugas/cv)
+- [📄 Cv](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan2/tugas/cv)
 
-### 📁 pertemuan 3
+### 📁 pertemuan3
 
-- [📍 pertemuan 3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 3/index)
+- [📍 pertemuan3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan3/index)
 
-### 📁 pertemuan 3/praktikum
+### 📁 pertemuan3/praktikum
 
-- [📄 Form_pizza](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 3/praktikum/form_pizza)
-- [📄 Pesanan_pizza](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 3/praktikum/pesanan_pizza)
+- [📄 Form_pizza](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan3/praktikum/form_pizza)
+- [📄 Pesanan_pizza](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan3/praktikum/pesanan_pizza)
 
-### 📁 pertemuan 3/tugas
+### 📁 pertemuan3/tugas
 
-- [📄 Form_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 3/tugas/form_laptop)
-- [📄 Pesanan_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 3/tugas/pesanan_laptop)
+- [📄 Form_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan3/tugas/form_laptop)
+- [📄 Pesanan_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan3/tugas/pesanan_laptop)
 
-### 📁 pertemuan 4/praktikum
+### 📁 pertemuan4/praktikum
 
-- [📄 Atas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/atas)
-- [📄 Cv](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/cv)
-- [📄 Footer](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/footer)
-- [📄 Form_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/form_laptop)
-- [📄 Home](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/home)
-- [📄 Menu](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/menu)
-- [📄 Pesanan_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/praktikum/pesanan_laptop)
+- [📄 Atas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/atas)
+- [📄 Cv](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/cv)
+- [📄 Footer](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/footer)
+- [📄 Form_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/form_laptop)
+- [📄 Home](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/home)
+- [📄 Menu](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/menu)
+- [📄 Pesanan_laptop](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/praktikum/pesanan_laptop)
 
-### 📁 pertemuan 4/tugas
+### 📁 pertemuan4/tugas
 
-- [📍 pertemuan 4/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 4/tugas/index)
+- [📍 pertemuan4/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan4/tugas/index)
 
-### 📁 pertemuan 6/praktikum
+### 📁 pertemuan5/praktikum
 
-- [📄 Cssbox1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 6/praktikum/cssbox1)
-- [📄 Cssbox2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 6/praktikum/cssbox2)
+- [📄 Alpukat](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan5/praktikum/alpukat)
 
-### 📁 pertemuan 6/tugas
+### 📁 pertemuan5/tugas
 
-- [📄 Color1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 6/tugas/color1)
-- [📄 Color2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 6/tugas/color2)
+- [📄 Burung](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan5/tugas/burung)
+- [📄 Table](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan5/tugas/table)
+- [📄 Vitamin](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan5/tugas/vitamin)
 
-### 📁 pertemuan 7/praktikum/praktikum-1
+### 📁 pertemuan6/praktikum
 
-- [📄 Flexbox1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 7/praktikum/praktikum-1/flexbox1)
+- [📄 Cssbox1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan6/praktikum/cssbox1)
+- [📄 Cssbox2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan6/praktikum/cssbox2)
 
-### 📁 pertemuan 7/praktikum/praktikum-2
+### 📁 pertemuan6/tugas
 
-- [📍 pertemuan 7/praktikum/praktikum-2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 7/praktikum/praktikum-2/index)
+- [📄 Color1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan6/tugas/color1)
+- [📄 Color2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan6/tugas/color2)
 
-### 📁 pertemuan 7/tugas
+### 📁 pertemuan7/praktikum/praktikum-1
 
-- [📍 pertemuan 7/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 7/tugas/index)
+- [📄 Flexbox1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan7/praktikum/praktikum-1/flexbox1)
 
-### 📁 pertemuan 9/praktikum
+### 📁 pertemuan7/praktikum/praktikum-2
 
-- [📄 Nomer1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer1)
-- [📄 Nomer2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer2)
-- [📄 Nomer3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan 9/praktikum/nomer3)
+- [📍 pertemuan7/praktikum/praktikum-2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan7/praktikum/praktikum-2/index)
+
+### 📁 pertemuan7/tugas
+
+- [📍 pertemuan7/tugas](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan7/tugas/index)
 
 ### 📁 pertemuan8
 
@@ -100,8 +105,14 @@ Browse through our available pages:
 - [📄 Register](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/register)
 - [📄 Sukses](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan8/sukses)
 
+### 📁 pertemuan9/praktikum
+
+- [📄 Nomer1](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan9/praktikum/nomer1)
+- [📄 Nomer2](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan9/praktikum/nomer2)
+- [📄 Nomer3](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan9/praktikum/nomer3)
+
 ---
 
-📊 **Stats**: 38 page(s) in 15 folder(s)
+📊 **Stats**: 42 page(s) in 17 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*
