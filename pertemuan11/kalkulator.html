@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+    <script>
+      function hitung() {
+        let x = parseInt(document.getElementById("bil1").value);
+        let y = parseInt(document.getElementById("bil2").value);
+        let z = 0;
+
+        if (document.getElementById("tambah").checked) {
+          z = x + y;
+        } else if (document.getElementById("kurang").checked) {
+          z = x - y;
+        } else if (document.getElementById("kali").checked) {
+          z = x * y;
+        } else {
+          z = x / y;
+        }
+        document.getElementById("hasil").innerHTML = z;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Kalkulator</h2>
+    <form action="">
+      Bilangan 1: <input type="text" id="bil1" />
+      <br />
+      Bilangan 2: <input type="text" id="bil2" />
+      <br />
+      Pilih Operasi aritmetika:
+      <input type="radio" name="ht" id="tambah" />+
+      <input type="radio" name="ht" id="kurang" />-
+      <input type="radio" name="ht" id="kali" />x
+      <input type="radio" name="ht" id="bagi" />:
+      <br />
+      <input type="button" value="Hitung" onclick="hitung()" />
+      <br />
+      Hasil Penjumlahan: <span id="hasil"></span>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function tampilGambar() {
+        let nilaiTerpilih = document.getElementById("pilihGambar").value;
+
+        switch (nilaiTerpilih) {
+          case "gambar1":
+            gambarPilih.src = "img/daun.jpg";
+            break;
+          case "gambar2":
+            gambarPilih.src = "img/rubah.jpg";
+            break;
+          case "gambar3":
+            gambarPilih.src = "img/daun2.jpg";
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Ganti Gambar</h2>
+    <label for="pilihGambar">Pilih Gambar:</label>
+    <select id="pilihGambar" onchange="tampilGambar()">
+      <option value="gambar1">Daun</option>
+      <option value="gambar2">Rubah</option>
+      <option value="gambar3">Tanaman Paku</option>
+    </select>
+    <br />
+    <img
+      src="img/daun.jpg"
+      id="gambarPilih"
+      alt="kosong"
+      width="30%"
+      height="40%"
+    />
+  </body>
+</html>
