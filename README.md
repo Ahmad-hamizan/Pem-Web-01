@@ -10,9 +10,10 @@ Welcome to the project documentation. Below you'll find a list of all available 
 
 
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-12-07 04:19 UTC*
+*Last updated: 2024-12-21 04:10 UTC*
 
 Browse through our available pages:
 
@@ -27,6 +28,11 @@ Browse through our available pages:
 - [📄 Gantigambar](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan11/gantigambar)
 - [📄 Kalkulator](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan11/kalkulator)
 - [📄 Kurs](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan11/kurs)
+
+### 📁 pertemuan12/praktikum
+
+- [📄 Form](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan12/praktikum/form)
+- [📍 pertemuan12/praktikum](https://ahmad-hamizan.github.io/Pem-Web-01/pertemuan12/praktikum/index)
 
 ### 📁 pertemuan2/praktikum
 
@@ -126,6 +132,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 47 page(s) in 19 folder(s)
+📊 **Stats**: 49 page(s) in 20 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*
