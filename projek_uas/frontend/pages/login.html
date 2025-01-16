@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-blue-900 to-black">
+    <div class="container mx-auto min-h-screen p-4 sm:p-6 md:p-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <!-- Left Column - Welcome Text -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+          >
+            Welkam Masbroo!!
+          </h1>
+          <p class="text-blue-200 text-sm md:text-base lg:text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            blanditiis magnam deleniti impedit enim ut reprehenderit ratione
+            sequi vel numquam, accusamus, voluptas aperiam quod laudantium.
+          </p>
+        </div>
+
+        <!-- Right Column - Login Form -->
+        <div class="w-full lg:w-1/2 max-w-md mx-auto">
+          <div
+            class="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-white/20"
+          >
+            <!-- User Icon -->
+            <div class="flex justify-center mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-16 h-16 text-blue-400"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="10" r="3" />
+                <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+              </svg>
+            </div>
+
+            <form id="loginForm" onsubmit="login()" class="w-full">
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-blue-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="username"
+                  class="peer-focus:font-medium absolute text-sm text-blue-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Username
+                </label>
+              </div>
+
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-blue-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="password"
+                  class="peer-focus:font-medium absolute text-sm text-blue-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Password
+                </label>
+              </div>
+
+              <div class="flex items-center mb-6">
+                <input
+                  id="remember"
+                  type="checkbox"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <label
+                  for="remember"
+                  class="ml-2 text-sm font-medium text-blue-200"
+                >
+                  Remember Me?
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm transition-colors duration-200 ease-in-out"
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

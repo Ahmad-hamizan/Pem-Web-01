@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students - School Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 antialiased">
+    <div class="flex flex-col md:flex-row min-h-screen">
+      <!-- Sidebar (Mobile: Drawer) -->
+      <div
+        class="absolute bg-gray-800 text-white w-72 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-200"
+        id="sidebar"
+      >
+        <!-- Sidebar Content -->
+        <div class="p-9">
+          <div class="flex items-center mt-4 p-4">
+            <img
+              src="https://ui-avatars.com/api/?name=Admin"
+              alt="Profile"
+              class="w-16 h-16 rounded-full"
+            />
+            <span class="text-white ml-2"
+              ><a href="profile.html">Admin</a></span
+            >
+          </div>
+          <nav class="mt-4">
+            <a href="index.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Dashboard
+            </a>
+            <a
+              href="students.html"
+              class="block py-2.5 px-4 bg-blue-700 hover:bg-blue-600"
+            >
+              Students
+            </a>
+            <a href="teachers.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Teachers
+            </a>
+            <a href="classes.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Classes
+            </a>
+            <a
+              href=""
+              class="block py-2.5 px-4 hover:bg-blue-600"
+              onclick="logout()"
+            >
+              Logout
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden absolute w-full">
+        <!-- Navbar -->
+        <div class="bg-white shadow">
+          <div class="container mx-auto">
+            <div class="flex py-4 px-2">
+              <button
+                class="text-gray-500 hover:text-gray-600"
+                id="open-sidebar"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+
+              <h1 class="text-xl font-semibold pl-4">Portal Sekolah</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-1 flex flex-col">
+        <!-- Top Navbar -->
+        <nav class="bg-white shadow-md">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+              <button id="mobile-menu-toggle" class="md:hidden text-gray-500">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+              <h1 class="text-xl font-semibold">School Portal</h1>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Students Content -->
+        <main class="container mx-auto px-8 py-8">
+          <div
+            class="flex flex-row md:flex-row justify-between items-center mb-6"
+          >
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 md:mb-0">
+              Students
+            </h2>
+            <a href="tmbhsiswa.html">
+              <button
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >
+                Add New Student
+              </button></a
+            >
+          </div>
+
+          <!-- Search and Filters -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <input
+              type="text"
+              placeholder="Search students..."
+              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            />
+            <select
+              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option>All Grades</option>
+              <option>Grade 9</option>
+              <option>Grade 10</option>
+              <option>Grade 11</option>
+              <option>Grade 12</option>
+            </select>
+            <select
+              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option>All Classes</option>
+              <option>Class A</option>
+              <option>Class B</option>
+              <option>Class C</option>
+            </select>
+          </div>
+
+          <!-- Students Table (Responsive) -->
+          <div class="overflow-x-auto bg-white rounded-lg shadow">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Student
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    ID
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Grade
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Class
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://ui-avatars.com/api/?name=Alice+Johnson"
+                        alt=""
+                      />
+                      <div class="ml-4">
+                        <div class="text-sm font-medium text-gray-900">
+                          Alice Johnson
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          alice.j@example.com
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">STU001</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Grade 10</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Class A</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    >
+                      Active
+                    </span>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                  >
+                    <a href="#" class="text-blue-600 hover:text-blue-900 mr-2"
+                      >Edit</a
+                    >
+                    <a href="#" class="text-red-600 hover:text-red-900"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://ui-avatars.com/api/?name=Alice+Johnson"
+                        alt=""
+                      />
+                      <div class="ml-4">
+                        <div class="text-sm font-medium text-gray-900">
+                          Alice Johnson
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          alice.j@example.com
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">STU001</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Grade 10</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Class A</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    >
+                      Active
+                    </span>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                  >
+                    <a href="#" class="text-blue-600 hover:text-blue-900 mr-2"
+                      >Edit</a
+                    >
+                    <a href="#" class="text-red-600 hover:text-red-900"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://ui-avatars.com/api/?name=Alice+Johnson"
+                        alt=""
+                      />
+                      <div class="ml-4">
+                        <div class="text-sm font-medium text-gray-900">
+                          Alice Johnson
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          alice.j@example.com
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">STU001</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Grade 10</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">Class A</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    >
+                      Active
+                    </span>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                  >
+                    <a href="#" class="text-blue-600 hover:text-blue-900 mr-2"
+                      >Edit</a
+                    >
+                    <a href="#" class="text-red-600 hover:text-red-900"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0"
+          >
+            <div>
+              <p class="text-sm text-gray-700">
+                Showing <span class="font-medium">1</span> to
+                <span class="font-medium">10</span> of
+                <span class="font-medium">97</span> results
+              </p>
+            </div>
+            <div class="flex space-x-2">
+              <button
+                class="px-4 py-2 border rounded text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Previous
+              </button>
+              <button
+                class="px-4 py-2 border rounded text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - School Dashboard</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen flex">
+      <!-- Sidebar -->
+      <div
+        class="absolute bg-gray-800 text-white w-72 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-200"
+        id="sidebar"
+      >
+        <!-- Sidebar Content -->
+        <div class="p-9">
+          <div class="flex items-center mt-4 p-4">
+            <img
+              src="https://ui-avatars.com/api/?name=Admin"
+              alt="Profile"
+              class="w-16 h-16 rounded-full"
+            />
+            <span class="text-white ml-2"
+              ><a href="profile.html">Admin</a></span
+            >
+          </div>
+          <nav class="mt-4">
+            <a
+              href="index.html"
+              class="block py-2.5 px-4 hover:bg-blue-600"
+            >
+              Dashboard
+            </a>
+            <a href="students.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Students
+            </a>
+            <a href="teachers.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Teachers
+            </a>
+            <a href="classes.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Classes
+            </a>
+            <a
+              href=""
+              class="block py-2.5 px-4 hover:bg-blue-600"
+              onclick="logout()"
+            >
+              Logout
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden absolute w-full">
+        <!-- Navbar -->
+        <div class="bg-white shadow">
+          <div class="container mx-auto">
+            <div class="flex py-4 px-2">
+              <button
+                class="text-gray-500 hover:text-gray-600"
+                id="open-sidebar"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+
+              <h1 class="text-xl font-semibold pl-4">Portal Sekolah</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="flex-1 py-20">
+        <!-- Profile Content -->
+        <div class="p-6">
+          <div class="max-w-4xl mx-auto">
+            <!-- Profile Header -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Admin&size=128"
+                    alt="Profile"
+                    class="w-32 h-32 rounded-full mb-4 md:mb-0"
+                  />
+                  <div class="md:ml-6 text-center md:text-left">
+                    <h1 class="text-2xl font-bold text-gray-900">Admin</h1>
+                    <p class="text-gray-600">Mathematics Teacher</p>
+                    <div
+                      class="mt-2 flex flex-wrap justify-center md:justify-start gap-2"
+                    >
+                      <span
+                        class="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-800"
+                        >Senior Faculty</span
+                      >
+                      <span
+                        class="px-3 py-1 text-sm rounded-full bg-green-100 text-green-800"
+                        >10+ Years Experience</span
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="mt-4 md:mt-0 md:ml-auto px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  >
+                    Edit Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Personal Information -->
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                  <h2 class="text-lg font-semibold text-gray-900">
+                    Personal Information
+                  </h2>
+                </div>
+                <div class="p-4 space-y-4">
+                  <div>
+                    <label class="text-sm text-gray-500">Email</label>
+                    <p class="text-gray-900">admiin@school.edu</p>
+                  </div>
+                  <div>
+                    <label class="text-sm text-gray-500">Phone</label>
+                    <p class="text-gray-900">(555) 123-4567</p>
+                  </div>
+                  <div>
+                    <label class="text-sm text-gray-500">Date of Birth</label>
+                    <p class="text-gray-900">March 15, 1980</p>
+                  </div>
+                  <div>
+                    <label class="text-sm text-gray-500">Address</label>
+                    <p class="text-gray-900">
+                      123 Education Street, Teaching City, TC 12345
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Academic Information -->
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                  <h2 class="text-lg font-semibold text-gray-900">
+                    Academic Information
+                  </h2>
+                </div>
+                <div class="p-4 space-y-4">
+                  <div>
+                    <label class="text-sm text-gray-500">Department</label>
+                    <p class="text-gray-900">Mathematics</p>
+                  </div>
+                  <div>
+                    <label class="text-sm text-gray-500"
+                      >Classes Teaching</label
+                    >
+                    <div class="space-y-1">
+                      <p class="text-gray-900">
+                        Grade 10 Mathematics - Section A
+                      </p>
+                      <p class="text-gray-900">Grade 11 Advanced Mathematics</p>
+                      <p class="text-gray-900">Grade 12 Calculus</p>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="text-sm text-gray-500">Office Hours</label>
+                    <p class="text-gray-900">
+                      Monday & Wednesday: 2:00 PM - 4:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Qualifications -->
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                  <h2 class="text-lg font-semibold text-gray-900">
+                    Qualifications
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-blue-600"
+                      >
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                      <div>
+                        <p class="font-medium text-gray-900">
+                          Ph.D. in Mathematics
+                        </p>
+                        <p class="text-sm text-gray-500">
+                          Stanford University, 2005
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-blue-600"
+                      >
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                      <div>
+                        <p class="font-medium text-gray-900">
+                          M.Sc. in Mathematics Education
+                        </p>
+                        <p class="text-sm text-gray-500">MIT, 2002</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-4 h-4 mt-1 mr-2 text-blue-600"
+                      >
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                      <div>
+                        <p class="font-medium text-gray-900">
+                          B.Sc. in Mathematics
+                        </p>
+                        <p class="text-sm text-gray-500">
+                          Harvard University, 2000
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Recent Activity -->
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                  <h2 class="text-lg font-semibold text-gray-900">
+                    Recent Activity
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <div class="space-y-4">
+                    <div class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-blue-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          />
+                        </svg>
+                      </span>
+                      <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-900">
+                          Posted grades for Grade 10 Mathematics
+                        </p>
+                        <p class="text-xs text-gray-500">2 hours ago</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-green-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                      </span>
+                      <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-900">
+                          Created new assignment for Grade 11
+                        </p>
+                        <p class="text-xs text-gray-500">Yesterday</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start">
+                      <span
+                        class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-purple-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+                          />
+                        </svg>
+                      </span>
+                      <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-900">
+                          Updated course materials
+                        </p>
+                        <p class="text-xs text-gray-500">2 days ago</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

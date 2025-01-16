@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes - School Dashboard</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen flex">
+      <!-- Sidebar -->
+      <div
+        class="absolute bg-gray-800 text-white w-72 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-200"
+        id="sidebar"
+      >
+        <!-- Sidebar Content -->
+        <div class="p-9">
+          <div class="flex  items-center mt-4 p-4">
+            <img
+              src="https://ui-avatars.com/api/?name=Ahmad+Hamizan"
+              alt="Profile"
+              class="w-16 h-16 rounded-full"
+            />
+            <span class="text-white ml-2"
+              ><a href="profile.html">Ahmad Hamizan</a></span
+            >
+          </div>
+          <nav class="mt-4">
+            <a
+              href="index.html"
+              class="block py-2.5 px-4 hover:bg-blue-600"
+            >
+              Dashboard
+            </a>
+            <a href="students.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Students
+            </a>
+            <a href="teachers.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Teachers
+            </a>
+            <a href="classes.html" class="block py-2.5 px-4  bg-blue-700 hover:bg-blue-600">
+              Classes
+            </a>
+            <a
+              href=""
+              class="block py-2.5 px-4 hover:bg-blue-600"
+              onclick="logout()"
+            >
+              Logout
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden absolute w-full">
+        <!-- Navbar -->
+        <div class="bg-white shadow">
+          <div class="container mx-auto">
+            <div class="flex py-4 px-2">
+              <button
+                class="text-gray-500 hover:text-gray-600"
+                id="open-sidebar"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+
+              <h1 class="text-xl font-semibold pl-4">Portal Sekolah</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="flex-1">
+        <!-- Classes Content -->
+        <div class="py-20 px-8 container mx-auto">
+          <div class="mb-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Classes</h1>
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
+              <a href="tmbhkelas.html">Add New Class</a>
+            </button>
+          </div>
+
+          <!-- Class Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Math Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                      Mathematics
+                    </h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section A</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4 mr-3">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Sarah+Wilson"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Sarah Wilson
+                    </p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">32</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Mon, Wed, Fri</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >9:00 AM - 10:30 AM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Science Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">Science</h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section B</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Michael+Brown"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Michael Brown
+                    </p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">28</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Tue, Thu</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >10:45 AM - 12:15 PM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- English Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">English</h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section A</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Emily+Davis"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">Emily Davis</p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">30</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Mon, Wed, Fri</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >1:00 PM - 2:30 PM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+            <!-- Math Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                      Mathematics
+                    </h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section A</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4 mr-3">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Sarah+Wilson"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Sarah Wilson
+                    </p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">32</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Mon, Wed, Fri</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >9:00 AM - 10:30 AM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Science Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">Science</h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section B</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Michael+Brown"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">
+                      Michael Brown
+                    </p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">28</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Tue, Thu</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >10:45 AM - 12:15 PM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- English Class Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-4 bg-blue-50 border-b">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">English</h3>
+                    <p class="text-sm text-gray-600">Grade 10 - Section A</p>
+                  </div>
+                  <span
+                    class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-4">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Emily+Davis"
+                    alt="Teacher"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-900">Emily Davis</p>
+                    <p class="text-xs text-gray-500">Lead Teacher</p>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Students</span>
+                    <span class="font-medium text-gray-900">30</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Schedule</span>
+                    <span class="font-medium text-gray-900">Mon, Wed, Fri</span>
+                  </div>
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-500">Time</span>
+                    <span class="font-medium text-gray-900"
+                      >1:00 PM - 2:30 PM</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-end space-x-3">
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    View Details
+                  </button>
+                  <button class="text-sm text-blue-600 hover:text-blue-800">
+                    Edit Class
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

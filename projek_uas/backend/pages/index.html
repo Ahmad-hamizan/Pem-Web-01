@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Dashboard</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="h-screen flex">
+      <!-- Sidebar -->
+      <div
+        class="absolute bg-gray-800 text-white w-72 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-200"
+        id="sidebar"
+      >
+        <!-- Sidebar Content -->
+        <div class="p-9">
+          <div class="flex items-center mt-4 p-4">
+            <img
+              src="https://ui-avatars.com/api/?name=Admin"
+              alt="Profile"
+              class="w-16 h-16 rounded-full"
+            />
+            <span class="text-white ml-2"
+              ><a href="profile.html">Admin</a></span
+            >
+          </div>
+          <nav class="mt-4">
+            <a
+              href="index.html"
+              class="block py-2.5 px-4 bg-blue-700 hover:bg-blue-600"
+            >
+              Dashboard
+            </a>
+            <a href="students.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Students
+            </a>
+            <a href="teachers.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Teachers
+            </a>
+            <a href="classes.html" class="block py-2.5 px-4 hover:bg-blue-600">
+              Classes
+            </a>
+            <a
+              href=""
+              class="block py-2.5 px-4 hover:bg-blue-600"
+              onclick="logout()"
+            >
+              Logout
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden absolute w-full">
+        <!-- Navbar -->
+        <div class="bg-white shadow">
+          <div class="container mx-auto">
+            <div class="flex py-4 px-2">
+              <button
+                class="text-gray-500 hover:text-gray-600"
+                id="open-sidebar"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+
+              <h1 class="text-xl font-semibold pl-4">Portal Sekolah</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="flex-1">
+        <!-- Dashboard Content -->
+        <div class="pt-20 px-4">
+          <!-- Stats Cards -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6"
+          >
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-gray-500 text-sm font-medium">Total Students</h3>
+              <p class="text-2xl font-bold text-gray-900">1,234</p>
+              <p class="text-green-600 text-sm">↑ 56 new enrollments</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-gray-500 text-sm font-medium">Attendance Rate</h3>
+              <p class="text-2xl font-bold text-gray-900">95.2%</p>
+              <p class="text-green-600 text-sm">↑ 2.1% from last month</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-gray-500 text-sm font-medium">Average Grade</h3>
+              <p class="text-2xl font-bold text-gray-900">B+</p>
+              <p class="text-blue-600 text-sm">→ Stable this semester</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-gray-500 text-sm font-medium">Active Teachers</h3>
+              <p class="text-2xl font-bold text-gray-900">87</p>
+              <p class="text-green-600 text-sm">↑ 3 new hires</p>
+            </div>
+          </div>
+
+          <!-- Recent Activity and Calendar -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-4">
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-lg font-medium text-gray-900 mb-4">
+                Recent Activity
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <span
+                      class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      New grade posted
+                    </p>
+                    <p class="text-sm text-gray-500">Math 101 - Final Exam</p>
+                    <p class="text-xs text-gray-400">2 hours ago</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <span
+                      class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-green-100 text-green-600"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      Attendance marked
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Science Class - Period 3
+                    </p>
+                    <p class="text-xs text-gray-400">4 hours ago</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <span
+                      class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-purple-100 text-purple-600"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      Event scheduled
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Parent-Teacher Conference
+                    </p>
+                    <p class="text-xs text-gray-400">Yesterday</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-lg font-medium text-gray-900 mb-4">
+                Upcoming Events
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                  <div class="flex-shrink-0 text-center">
+                    <p class="text-sm font-bold text-blue-600">MAR</p>
+                    <p class="text-2xl font-bold text-blue-600">15</p>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      Science Fair
+                    </p>
+                    <p class="text-sm text-gray-500">9:00 AM - 3:00 PM</p>
+                  </div>
+                </div>
+                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                  <div class="flex-shrink-0 text-center">
+                    <p class="text-sm font-bold text-purple-600">MAR</p>
+                    <p class="text-2xl font-bold text-purple-600">18</p>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">Sports Day</p>
+                    <p class="text-sm text-gray-500">All Day Event</p>
+                  </div>
+                </div>
+                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                  <div class="flex-shrink-0 text-center">
+                    <p class="text-sm font-bold text-green-600">MAR</p>
+                    <p class="text-2xl font-bold text-green-600">22</p>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      Parent-Teacher Meeting
+                    </p>
+                    <p class="text-sm text-gray-500">4:00 PM - 7:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <!-- <div class="bg-gray-100 text-gray-900 flex justify-center items-center h-screen">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-96">
+              <div class="flex justify-between items-center mb-4">
+                <button id="prevMonth" class="bg-gray-300 text-white rounded-lg p-2">Prev</button>
+                <h2 id="monthYear" class="text-xl font-semibold">January 2025</h2>
+                <button id="nextMonth" class="bg-gray-300 text-white rounded-lg p-2">Next</button>
+              </div>
+              
+              <div class="grid grid-cols-7 gap-1 text-center">
+                <div class="font-semibold text-sm text-gray-600">Sun</div>
+                <div class="font-semibold text-sm text-gray-600">Mon</div>
+                <div class="font-semibold text-sm text-gray-600">Tue</div>
+                <div class="font-semibold text-sm text-gray-600">Wed</div>
+                <div class="font-semibold text-sm text-gray-600">Thu</div>
+                <div class="font-semibold text-sm text-gray-600">Fri</div>
+                <div class="font-semibold text-sm text-gray-600">Sat</div>
+              </div>
+              
+              <div id="calendarGrid" class="grid grid-cols-7 gap-1 mt-4"></div>
+            </div>
+        </div> -->
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
